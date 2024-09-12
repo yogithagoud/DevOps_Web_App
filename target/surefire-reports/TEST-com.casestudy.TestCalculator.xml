@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casestudy.TestCalculator" time="0.704" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casestudy.TestCalculator" time="0.449" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app\target\test-classes;C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app\target\classes;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-runner\1.5.2\junit-platform-runner-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-launcher\1.5.2\junit-platform-launcher-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-suite-api\1.5.2\junit-platform-suite-api-1.5.2.jar;"/>
+    <property name="java.class.path" value="E:\DevOps_by_Rahul\Workspace\DevOps_Web_App\target\test-classes;E:\DevOps_by_Rahul\Workspace\DevOps_Web_App\target\classes;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-runner\1.5.2\junit-platform-runner-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-launcher\1.5.2\junit-platform-launcher-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-suite-api\1.5.2\junit-platform-suite-api-1.5.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="G:\PC Softwares\jdk-17.0.11\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire2545362636728659506\surefirebooter-20240904193443275_3.jar C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire2545362636728659506 2024-09-04T19-34-42_744-jvmRun1 surefire-20240904193443275_1tmp surefire_0-20240904193443275_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire4799569825619770304\surefirebooter-20240912223506663_3.jar C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire4799569825619770304 2024-09-12T22-35-06_397-jvmRun1 surefire-20240912223506663_1tmp surefire_0-20240912223506663_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app\target\test-classes;C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app\target\classes;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-runner\1.5.2\junit-platform-runner-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-launcher\1.5.2\junit-platform-launcher-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-suite-api\1.5.2\junit-platform-suite-api-1.5.2.jar;"/>
+    <property name="surefire.test.class.path" value="E:\DevOps_by_Rahul\Workspace\DevOps_Web_App\target\test-classes;E:\DevOps_by_Rahul\Workspace\DevOps_Web_App\target\classes;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.2\junit-jupiter-engine-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-engine\1.5.2\junit-platform-engine-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-commons\1.5.2\junit-platform-commons-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.2\junit-jupiter-api-5.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-runner\1.5.2\junit-platform-runner-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-launcher\1.5.2\junit-platform-launcher-1.5.2.jar;C:\Users\Rahul Kalithkar\.m2\repository\org\junit\platform\junit-platform-suite-api\1.5.2\junit-platform-suite-api-1.5.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Rahul Kalithkar"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-04-16"/>
     <property name="java.home" value="G:\PC Softwares\jdk-17.0.11"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app"/>
+    <property name="basedir" value="E:\DevOps_by_Rahul\Workspace\DevOps_Web_App"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire2545362636728659506\surefirebooter-20240904193443275_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rahul Kalithkar\AppData\Local\Temp\surefire4799569825619770304\surefirebooter-20240912223506663_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.11+7-LTS-207"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\RAHULK~1\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.11"/>
-    <property name="user.dir" value="C:\Users\Rahul Kalithkar\OneDrive\Desktop\DevOps\Workspace\Devops_Casestudy_Web_app\Devops_Casestudy_Web_app"/>
+    <property name="user.dir" value="E:\DevOps_by_Rahul\Workspace\DevOps_Web_App"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -56,14 +56,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testDiv()" classname="TestCalculator" time="0.033"/>
-  <testcase name="testMul()" classname="TestCalculator" time="0.0"/>
-  <testcase name="testSub()" classname="TestCalculator" time="0.002"/>
-  <testcase name="testSum()" classname="TestCalculator" time="0.002"/>
-  <testcase name="Passed Mul" classname="TestCalculator" time="0.011"/>
-  <testcase name="Passed Sub" classname="TestCalculator" time="0.002"/>
+  <testcase name="testDiv()" classname="TestCalculator" time="0.02"/>
+  <testcase name="testMul()" classname="TestCalculator" time="0.001"/>
+  <testcase name="testSub()" classname="TestCalculator" time="0.001"/>
+  <testcase name="testSum()" classname="TestCalculator" time="0.001"/>
+  <testcase name="Passed Mul" classname="TestCalculator" time="0.004"/>
+  <testcase name="Passed Sub" classname="TestCalculator" time="0.001"/>
   <testcase name="Passed Sum" classname="TestCalculator" time="0.001"/>
-  <testcase name="Failed Sub" classname="TestCalculator" time="0.005"/>
+  <testcase name="Failed Sub" classname="TestCalculator" time="0.003"/>
   <testcase name="Failed Sum" classname="TestCalculator" time="0.001"/>
-  <testcase name="Passed Div" classname="TestCalculator" time="0.002"/>
+  <testcase name="Passed Div" classname="TestCalculator" time="0.001"/>
 </testsuite>
