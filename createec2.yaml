@@ -1,0 +1,17 @@
+---
+# Launching EC2 instance
+- hosts: localhost
+  tasks:
+    - name: launching AWS instance using Ansible
+      ec2:
+        key_name: my-first-key-pair
+        instance_type: t2.micro
+        image: ami-02d55cb47e83a99a0
+        region: ap-south-1
+        wait: yes
+        group: launch-wizard-1
+        count: 1
+        vpc_subnet_id: subnet-7f375c33
+        assign_public_ip: yes
+        user_data: "{{ lookup('file', 'installations.sh') }}"
+...

@@ -1,0 +1,42 @@
+pipeline{
+    agent any
+    stages{
+        stage('Git Checkout'){
+            steps{
+                git credentialsId: 'gitHub_creds', url: 'git@github.com:rahulkalithkar/1383051_Devops_Casestudy_Web_app.git'
+            }
+        }
+		stage('SonarQube Analysis & Build'){
+		    steps{
+                withSonarQubeEnv('SonarQube Server'){
+				sh 'mvn clean package sonar:sonar'
+				}   
+            }
+        }
+        stage('Docker Build'){
+            steps{
+                sh 'sudo docker build -t kalithkar/casestudy_web_app:3.0 .'
+            }
+        }
+        stage('Docker push to repo'){
+            steps{
+                withCredentials([string(credentialsId: 'docker_credentials', variable: 'Docker')]) {
+                sh 'sudo docker login -u kalithkar -p ${Docker}'
+                sh 'sudo docker push kalithkar/casestudy_web_app:3.0'
+                }
+            }
+        }
+        stage('Lauching EC2 using Ansible playbook & Run'){
+            steps{
+                ansiblePlaybook installation: 'Ansible', playbook: 'createec2.yaml'
+            }
+        }
+       
+    }
+	
+	post{
+        always{
+            emailext body: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS: Check console output at $BUILD_URL to view the results.', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'rahulkalithkar1996@gmail.com'    
+        }
+    }
+}
