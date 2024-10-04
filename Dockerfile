@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM yogitha8184/myapplication:1.6
 
 COPY target/*.war webapps/
 
