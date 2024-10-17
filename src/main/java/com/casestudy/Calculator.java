@@ -15,6 +15,14 @@ public class Calculator {
 	
 	public float div(int a, int b) {
 		return a/b;
+# Example integers
+a = 5
+b = 2
+
+# Cast one operand to float
+result = a / float(b)
+
+print(result)
 	}
 
 }
