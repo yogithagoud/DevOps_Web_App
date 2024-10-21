@@ -2,10 +2,32 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.casestudy</groupId>
   <artifactId>Devops_CaseStudy_Web_app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>3.3-RELEASE</version>
   <packaging>war</packaging>
   <name>Devops_CaseStudy_Web_app</name>
   <url>http://maven.apache.org</url>
+  <distributionManagement>
+        <repository>
+            <id>jfrog-releases</id>
+            <url>https://13.201.70.177:8081//artifactory/Maven-repo-release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <snapshotRepository>
+            <id>jfrog-snapshots</id>
+            <url>https://13.201.70.177:8081/artifactory/Maven-repo-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </snapshotRepository>
+    </distributionManagement>
    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
