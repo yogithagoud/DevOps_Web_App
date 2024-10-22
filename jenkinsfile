@@ -1,42 +1,72 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Git Checkout'){
-            steps{
-                git credentialsId: 'gitHub_creds', url: 'git@github.com:rahulkalithkar/1383051_Devops_Casestudy_Web_app.git'
+    tools {
+        maven "Maven"
+    }
+    environment {
+        PATH = "$PATH:$WORKSPACE/jfrog-cli" // Ensure the JFrog CLI is in the PATH
+        SERVER_ID = 'artifactory-server'      // Optional if not using server-id
+        MAVEN_REPO_RELEASE = 'libs-release-local'
+        MAVEN_REPO_SNAPSHOT = 'libs-snapshot-local'
+        ARTIFACTORY_URL = 'http://15.206.72.223:8082/artifactory' // Ensure to set your Artifactory URL
+    }
+    stages {
+        stage('Git checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/yogithagoud/DevOps_Web_App.git'
             }
         }
-		stage('SonarQube Analysis & Build'){
-		    steps{
-                withSonarQubeEnv('SonarQube Server'){
-				sh 'mvn clean package sonar:sonar'
-				}   
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean install'
             }
         }
-        stage('Docker Build'){
-            steps{
-                sh 'sudo docker build -t kalithkar/casestudy_web_app:3.0 .'
-            }
-        }
-        stage('Docker push to repo'){
-            steps{
-                withCredentials([string(credentialsId: 'docker_credentials', variable: 'Docker')]) {
-                sh 'sudo docker login -u kalithkar -p ${Docker}'
-                sh 'sudo docker push kalithkar/casestudy_web_app:3.0'
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'SonarQube-token') {
+                    sh 'mvn clean sonar:sonar package'
                 }
             }
         }
-        stage('Lauching EC2 using Ansible playbook & Run'){
-            steps{
-                ansiblePlaybook installation: 'Ansible', playbook: 'createec2.yaml'
+        stage('Install JFrog CLI') {
+            steps {
+                // Download and install JFrog CLI to the workspace directory
+                sh 'curl -fL https://getcli.jfrog.io | sh'
+                // Move JFrog CLI to a directory within the workspace
+                sh 'mkdir -p $WORKSPACE/jfrog-cli && mv jfrog $WORKSPACE/jfrog-cli/'
             }
         }
-       
-    }
-	
-	post{
-        always{
-            emailext body: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS: Check console output at $BUILD_URL to view the results.', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'rahulkalithkar1996@gmail.com'    
+        stage('Artifact Backup to JFrog') {
+            steps {
+                script {
+                    
+                    // Configure JFrog CLI with Artifactory server credentials
+                    withCredentials([usernamePassword(credentialsId: 'jfrog-id', usernameVariable: 'ARTIFACTORY_USER', passwordVariable: 'ARTIFACTORY_PASSWORD')]) {
+                        sh '''
+                            jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASSWORD
+                            jfrog rt u "target/*.war" "$MAVEN_REPO_RELEASE/artifact/"
+                           '''
+                    }
+                }
+            }
+        }
+        stage('Docker build') {
+            steps {
+                sh 'docker build -t yogitha8184/application:1.5 .'
+            }
+        }
+        stage('Docker push image to Docker Hub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker_creds', passwordVariable: 'DockerPassword', usernameVariable: 'DockerUsername')]) {
+                    sh 'docker login -u $DockerUsername -p $DockerPassword'
+                    sh 'docker push yogitha8184/application:1.5'
+                }
+            }
+        }
+        stage('Docker run image') {
+            steps {
+                sh 'docker run -itd -p 8085:8080 yogitha8184/application:1.5'
+            }
         }
     }
 }
