@@ -9,7 +9,7 @@
   <distributionManagement>
         <repository>
             <id>jfrog-releases</id>
-            <url>https://15.206.72.223:8081/artifactory/Maven-repo-release</url>
+            <url>http://34.234.83.111:8081/artifactory/Maven-repo-release</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -19,7 +19,7 @@
         </repository>
         <snapshotRepository>
             <id>jfrog-snapshots</id>
-            <url>https://15.206.72.223:8081/artifactory/Maven-repo-snapshot</url>
+            <url>http://34.234.83.111:8081/artifactory/Maven-repo-snapshot</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
